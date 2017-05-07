@@ -4,6 +4,7 @@
         <router-view></router-view>
         <div style='border:2px solid;margin:20px;padding:20px'>
             <h3>登陆状态:{{isLogin}}</h3>
+            <h3>登陆状态:{{isLogin2}}</h3>
             <button @click="login">切换状态</button>
         </div>
         
@@ -20,12 +21,15 @@
         },
         computed: {
             isLogin: function () {
+                return this.$store.state.log;
+            },
+            isLogin2: function () {
                 return this.$store.state.user.log;
             }
         },
         methods:{
             login:function () {
-                let state=this.$store.state.user.log;
+                let state=this.$store.state.log;
                 if(state){
                     this.$store.commit('logout');
                 }else{
