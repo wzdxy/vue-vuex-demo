@@ -9,7 +9,7 @@ export default new Vuex.Store({
         count: 0,
         user: {
             id: 'admin',
-            log:'djailwhfwaio'
+            log:'我是初始状态, 请点击切换按钮'
         },
     },
     mutations: {

@@ -2,8 +2,11 @@
     <div id="app">
         <admin-head></admin-head>
         <router-view></router-view>
-        <p>登陆状态:{{is}}</p>
-        <button @click="login">切换状态</button>
+        <div style='border:2px solid;margin:20px;padding:20px'>
+            <h3>登陆状态:{{isLogin}}</h3>
+            <button @click="login">切换状态</button>
+        </div>
+        
     </div>
 </template>
 
@@ -16,7 +19,7 @@
             }
         },
         computed: {
-            is: function () {
+            isLogin: function () {
                 return this.$store.state.user.log;
             }
         },
