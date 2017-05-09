@@ -1,8 +1,8 @@
 /**
  * Created by Z on 2017/4/29.
  */
-import Vue from 'Vue'
-import Vuex from 'Vuex'
+import Vue from 'vue'
+import Vuex from 'vuex'
 Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
